@@ -31,7 +31,7 @@ class VirtualAlias(models.Model):
 	domain = models.ForeignKey('VirtualDomain',
 								on_delete=models.CASCADE)
 	source = models.CharField(max_length=100, unique=True)
-	destination = models.CharField(max_length=100, unique=True)
+	destination = models.CharField(max_length=100)
 	description = models.CharField(max_length=150, null=True, blank=True)
 	
 	class Meta:
